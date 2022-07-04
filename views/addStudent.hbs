@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {{#if add}} <title>Register</title> {{/if}}
+  {{#if student}} <title>Edit Profile</title> {{/if}}
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+  <div class="container mt-4">
+    <div class="card">
+      <div class="card-header">
+        {{#if student}}<h1>Student Profile</h1>{{/if}}
+        {{#if add}} <h1>Student Registration</h1> {{/if}}
+      </div>
+
+      <div class="card-body">
+        {{#if student}}
+          <form action="/students/update/{{student.student_id}}" method="post">
+        {{/if}}
+        {{#if add}}
+          <form action="/students/add" method="post">
+        {{/if}}
+          <fieldset>
+            <div class="mb-3">
+              <label for="first_name" class="form-label">First Name</label>
+              <input type="text" name="first_name" id="first_name" class="form-control" {{#if student}}value="{{student.first_name}}"{{/if}} {{#if add}} placeholder="Enter student first name" {{/if}} required />
+            </div>
+            
+            <div class="mb-3">
+              <label for="last_name" class="form-label">Last Name</label>
+              <input type="text" name="last_name" id="last_name" class="form-control" {{#if student}}value="{{student.last_name}}"{{/if}} {{#if add}} placeholder="Enter student last name" {{/if}} required />
+            </div>
+            
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" name="email" id="email" class="form-control" {{#if student}}value="{{student.email}}"{{/if}} {{#if add}} placeholder="Enter student email" {{/if}} required />
+            </div>
+
+            <div class="mb-3">
+              <label for="course_id" class="form-label">Course</label>
+              <select name="course_id" id="course_id" class="form-control" required>
+                {{#if add}}
+                  <option value="null" disabled selected>Select course</option>
+                {{/if}}
+                {{#if student}}
+                  <option value={{student.course_id}} selected>B{{student.course_id}} {{student.course_description}} {{student.course_name}}</option>
+                {{/if}}
+                {{#each courses}}
+                  <option value={{this.course_id}}>B{{this.course_id}} {{this.course_description}} {{this.course_name}}</option>
+                {{/each}}
+              </select>
+            </div>
+            
+            {{#if student}}
+              <input type="submit" value="Edit Student" class="btn btn-primary" />
+            {{/if}}
+            {{#if add}}
+              <input type="submit" value="Add Student" class="btn btn-primary" />
+            {{/if}}
+          </fieldset>
+        </form>
+      </div>
+    </div>
+    {{#if message}}
+      <h4 class="alert alert-danger mt-4">{{message}}</h4>
+    {{/if}}
+  </div>
+
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>

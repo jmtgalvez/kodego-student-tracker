@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Course</title>
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+  <div class="container mt-4">
+    <div class="card">
+      <div class="card-header">
+        <h1>New Course</h1>
+      </div>
+
+      <div class="card-body">
+        <form action="/courses/add" method="post">
+          <fieldset>
+
+            <div class="mb-3">
+              <label for="course_name" class="form-label">Course Name</label>
+              <select name="course_name" id="course_name" class="form-control" required>
+                <option value="null" selected disabled>Please select course title</option>
+                <option value="Front End Web Development">Front End Web Devlopment</option>
+                <option value="Back End Web Development">Back End Web Devlopment</option>
+                <option value="Full Stack Web Development">Full Stack Web Devlopment</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label for="course_description" class="form-label">Course Desription</label>
+              <select name="course_description" id="course_description" class="form-control" required>
+                <option value="null" selected disabled>Please select course description</option>
+                <option value="Full-Time">Full-Time</option>
+                <option value="Part-Time">Part-Time</option>
+              </select>
+            </div>
+            
+            <input type="submit" value="Create Course" class="btn btn-primary" />
+          </fieldset>
+        </form>
+      </div>
+    </div>
+    {{#if message}}
+      <h4 class="alert alert-danger mt-4">{{message}}</h4>
+    {{/if}}
+  </div>
+
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>
