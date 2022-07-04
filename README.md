@@ -2,7 +2,7 @@
 
 #### A Student Enrollment Tracking System
 
-# Server
+## Server
 
 ### Download
 
