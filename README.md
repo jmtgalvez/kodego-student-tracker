@@ -4,12 +4,12 @@
 
 ### Download
 
-1. Check if you already have github installed.
+1. Check if you already have github installed
 ```
 git --version
 ```
 
-2. If not, follow the steps for installation.
+2. If not, follow the steps for installation
 ```
 https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 ```
