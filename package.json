@@ -1,12 +1,11 @@
 {
   "name": "kodego-student-tracker",
   "version": "1.0.0",
-  "description": "Basic student tracker using NodeJS with Express, HBS, and Bootstrap.",
   "main": "App.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Miguel Galvez",
+  "author": "Miguel Galvez <jmtgalvez@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.0.1",
@@ -16,5 +15,6 @@
   "devDependencies": {
     "hbs": "^4.2.0",
     "nodemon": "^2.0.18"
-  }
+  },
+  "repository": "https://github.com/jmtgalvez/kodego-student-tracer"
 }
