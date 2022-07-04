@@ -2,8 +2,6 @@
 
 #### A Student Enrollment Tracking System
 
-## Server
-
 ### Download
 
 1. Check if you already have github installed.
