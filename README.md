@@ -1,9 +1,6 @@
-# kodego-student-tracer
-Basic student tracker using NodeJS with Express, HBS, and Bootstrap.
+# KodeGo Student Tracker
 
-
-#KodeGo Student Tracker
-#### A Student Enrolment Tracking System
+#### A Student Enrollment Tracking System
 
 # Server
 
