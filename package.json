@@ -16,5 +16,5 @@
     "hbs": "^4.2.0",
     "nodemon": "^2.0.18"
   },
-  "repository": "https://github.com/jmtgalvez/kodego-student-tracer"
+  "repository": "https://github.com/jmtgalvez/kodego-student-tracker"
 }

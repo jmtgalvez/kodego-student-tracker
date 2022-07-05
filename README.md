@@ -22,7 +22,7 @@ git config user.name "Your Name"
 
 4. Clone the repository
 ```
-git clone https://github.com/jmtgalvez/kodego-student-tracer
+git clone https://github.com/jmtgalvez/kodego-student-tracker
 ```
 
 ### Setup

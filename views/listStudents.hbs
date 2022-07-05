@@ -35,7 +35,7 @@
             <td>B{{this.course_id}} {{this.course_description}} {{this.course_name}}</td>
             <td>
               <a href="/students/update/{{this.student_id}}" class="btn btn-primary">Update</a>
-              <a href="/students/delete/{{this.student_id}}" onclick="return confirm('Do you really want to delete?')" class="btn btn-danger">Delete</a>
+              <a href="/students/delete/{{this.student_id}}" onclick="return confirm('Do you really want to remove {{this.first_name}} {{this.last_name}}?')" class="btn btn-danger">Remove</a>
             </td>
           </form></tr>
         {{/each}}
