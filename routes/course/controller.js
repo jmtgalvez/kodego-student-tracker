@@ -1,12 +1,11 @@
 const db = require('../database/index');
 
 exports.addCourseForm = (req, res) => {
-  let sql = 'SELECT * FROM course'
+  let sql = 'SELECT * FROM course GROUP BY course_name'
 
   db.query( sql, (err, rows) => {
     if (err) console.log(err.message);
     else {
-      
       res.render('addCourse', {courses: rows});
     }
   
